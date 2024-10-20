@@ -115,8 +115,11 @@ public class telaIdade extends javax.swing.JFrame {
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
         // TODO add your handling code here:
         int an = Integer.parseInt(txtAN.getValue().toString());
-        int id = 2024 - an;
+        int anoAtual = Calendar.getInstance().get(Calendar.YEAR);
+        
+        int id = anoAtual - an;
         lblIdade.setText(Integer.toString(id));
+        lblData.setText(Integer.toString(anoAtual));
     }//GEN-LAST:event_btnCalcActionPerformed
 
     /**
